@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Random Colors and Numbers</title>
+</head>
+
+<body onload="r()">
+
+  <center><span id="number" style="font-size: 16px; font-size: 80vh;">0</span></center>
+
+  <script language="javascript">
+    var myVar;
+
+    var colors = ["red", "blue", "white", "orange", "green"]
+
+    function r() {
+        myVar = setInterval(display, 2500);
+    }
+    
+    function display() {
+      r_num = Math.floor(Math.random() * 10) % 9;
+
+      r_color = Math.floor(Math.random() * 10) % 6;
+      
+      document.body.style.backgroundColor = colors[r_color]
+      document.getElementById("number").innerHTML = r_num.toString();
+    }
+
+  </script>
+</body>
+</html>
